@@ -1,0 +1,17 @@
+es:
+  app_name: 'Mascotitas Spa'
+  meta_title: 'Mascotitas Spa - El mejor lugar para tu mascota'
+  activerecord:
+    attributes:
+      user:
+        password: "Contraseña"
+        first_name: "Nombre"
+        last_name: "Apellido"
+        email: "Correo electrónico"
+        username: "Nombre de usuario"
+        phone: "Teléfono"
+    errors:
+      messages:
+        blank: "no puede estar en blanco"
+        too_short: "es demasiado corto (mínimo %{count} caracteres)"
+        invalid: "es inválido"
