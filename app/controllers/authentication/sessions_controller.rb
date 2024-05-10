@@ -15,6 +15,6 @@ class Authentication::SessionsController < ApplicationController
 
   def destroy
     logout current_user
-    redirect_to roor_path, notice: "Logged out successfully"
+    redirect_to root_path, notice: "Logged out successfully"
   end
 end

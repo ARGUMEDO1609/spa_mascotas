@@ -15,10 +15,10 @@ class ApplicationController < ActionController::Base
       Current.user ||= authenticate_user_from_session
   end
 
-  helper_method :current_user
+  helper_method :current_user, :user_signed_in?
 
   def user_signed_in?
-    current_user.present?
+    self.current_user.present?
   end
 
   def authenticate_user_from_session

@@ -1,0 +1,41 @@
+<%= form_with(model: current_user) do |form| %>
+  <div data-controller="previews">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar, direct_upload: true, data: { previews_target: "input", action: "change->previews#preview" } %>
+    <% if current_user.avatar.attached? %>
+      <%= image_tag current_user.avatar, class: 'avatar-preview', data: { previews_target: "preview" } %>
+    <% else %>
+      <%= image_tag 'placeholder.jpg', class: 'avatar-preview', data: { previews_target: "preview" } %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
