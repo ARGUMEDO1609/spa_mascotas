@@ -5,7 +5,7 @@
     <% if current_user.avatar.attached? %>
       <%= image_tag current_user.avatar, class: 'avatar-preview', data: { previews_target: "preview" } %>
     <% else %>
-      <%= image_tag 'placeholder.jpg', class: 'avatar-preview', data: { previews_target: "preview" } %>
+      <%= image_tag 'placeholder1.png', class: 'avatar-preview', data: { previews_target: "preview" } %>
     <% end %>
   </div>
 
@@ -39,3 +39,4 @@
   </div>
 <% end %>
 
+<%= link_to 'Change Password', edit_password_path(current_user) %>
